@@ -1,5 +1,9 @@
 # windows-dev-setup
-Instructions for setting up a development environment on your Windows computer
+Instructions for setting up a development environment on your Windows computer. Compatible with appAcademy curriculum.
+
+https://open.appacademy.io/learn/swe-in-person/software-engineering-foundations/ruby-environment-setup
+
+
 
 Windows Insider Program
 =======================
@@ -66,3 +70,31 @@ Windows Terminal
 
 Install: https://www.microsoft.com/p/windows-terminal-preview/9n0dx20hk701?SilentAuth=1&wa=wsignin1.0&activetab=pivot%3Aoverviewtab
 
+
+
+
+RBENV
+======
+
+https://github.com/rbenv/rbenv-installer#rbenv-installer
+https://unix.stackexchange.com/questions/378060/gcc-error-no-acceptable-c-compiler-found-in-path/545756#545756?newreg=41bcf4b931f8449287d1eb828df10b1f
+
+
+
+
+POWERSHELL
+======
+https://www.howtogeek.com/163127/how-powershell-differs-from-the-windows-command-prompt/
+
+https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/
+
+
+https://haacked.com/archive/2011/12/19/get-git-for-windows.aspx/
+https://haacked.com/archive/2011/12/13/better-git-with-powershell.aspx/
+
+
+Git
+===
+
+https://gitforwindows.org/
+https://help.github.com/en/github/using-git/caching-your-github-password-in-git
