@@ -1,0 +1,115 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+marstrong@DESKTOP-ON1U0CR:~$ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+Installing rbenv with git...
+Initialized empty Git repository in /home/marstrong/.rbenv/.git/
+Updating origin
+remote: Enumerating objects: 2794, done.
+remote: Total 2794 (delta 0), reused 0 (delta 0), pack-reused 2794
+Receiving objects: 100% (2794/2794), 518.76 KiB | 2.06 MiB/s, done.
+Resolving deltas: 100% (1760/1760), done.
+From https://github.com/rbenv/rbenv
+ * [new branch]      master     -> origin/master
+ * [new tag]         v0.1.0     -> v0.1.0
+ * [new tag]         v0.1.1     -> v0.1.1
+ * [new tag]         v0.1.2     -> v0.1.2
+ * [new tag]         v0.2.0     -> v0.2.0
+ * [new tag]         v0.2.1     -> v0.2.1
+ * [new tag]         v0.3.0     -> v0.3.0
+ * [new tag]         v0.4.0     -> v0.4.0
+ * [new tag]         v1.0.0     -> v1.0.0
+ * [new tag]         v1.1.0     -> v1.1.0
+ * [new tag]         v1.1.1     -> v1.1.1
+ * [new tag]         v1.1.2     -> v1.1.2
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Already on 'master'
+warning: gcc not found; using CC=cc
+aborted: compiler not found: cc
+Optional bash extension failed to build, but things will still work normally.
+
+Installing ruby-build with git...
+Cloning into '/home/marstrong/.rbenv/plugins/ruby-build'...
+remote: Enumerating objects: 159, done.
+remote: Counting objects: 100% (159/159), done.
+remote: Compressing objects: 100% (84/84), done.
+remote: Total 10836 (delta 119), reused 93 (delta 69), pack-reused 10677
+Receiving objects: 100% (10836/10836), 2.27 MiB | 1.94 MiB/s, done.
+Resolving deltas: 100% (7173/7173), done.
+Checking out files: 100% (528/528), done.
+
+Running doctor script to verify installation...
+Checking for `rbenv' in PATH: not found
+  You seem to have rbenv installed in `/home/marstrong/.rbenv/bin', but that
+  directory is not present in PATH. Please add it to PATH by configuring
+  your `~/.bashrc', `~/.zshrc', or `~/.config/fish/config.fish'.
+marstrong@DESKTOP-ON1U0CR:~$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+marstrong@DESKTOP-ON1U0CR:~$ echo '# initialize rbenv everytime you open a new console window (otherwise our system ruby version will take over when we start a new terminal session)' >> ~/.bashrc
+marstrong@DESKTOP-ON1U0CR:~$
+marstrong@DESKTOP-ON1U0CR:~$ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+marstrong@DESKTOP-ON1U0CR:~$
+marstrong@DESKTOP-ON1U0CR:~$ source
+-bash: source: filename argument required
+source: usage: source filename [arguments]
+marstrong@DESKTOP-ON1U0CR:~$ source ~/.bashrc
+marstrong@DESKTOP-ON1U0CR:~$ source
+-bash: source: filename argument required
+source: usage: source filename [arguments]
+marstrong@DESKTOP-ON1U0CR:~$ echo '' >> ~/.bashrc
+marstrong@DESKTOP-ON1U0CR:~$ echo '# source .bashrc from .bash_profile' >> ~/.bash_profile
+marstrong@DESKTOP-ON1U0CR:~$ echo 'source ~/.bashrc' >> ~/.bash_profile
+marstrong@DESKTOP-ON1U0CR:~$ code ~/.bash_profile
+marstrong@DESKTOP-ON1U0CR:~$
+marstrong@DESKTOP-ON1U0CR:~$
+marstrong@DESKTOP-ON1U0CR:~$
+marstrong@DESKTOP-ON1U0CR:~$ rbenv install 2.5.1
+Downloading ruby-2.5.1.tar.bz2...
+-> https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.1.tar.bz2
+^Cmarstrong@DESKTOP-ON1U0CR:~$
+marstrong@DESKTOP-ON1U0CR:~$ # use rbenv to install Ruby version 2.5.1
+marstrong@DESKTOP-ON1U0CR:~$ rbenv install 2.5.1
+
+^Cmarstrong@DESKTOP-ON1U0CR:~$ rbenv install 2.5.1
+
+
+q
+;
+        213fdadsfs
+
+^AInstalling ruby-2.5.1...
+
+WARNING: ruby-2.5.1 is nearing its end of life.
+It only receives critical security updates, no bug fixes.
+
+
+BUILD FAILED (Ubuntu 18.04 using ruby-build 20200401-9-g3ef704e)
+
+Inspect or clean up the working tree at /tmp/ruby-build.20200422221555.500.H8sKp7
+Results logged to /tmp/ruby-build.20200422221555.500.log
+
+Last 10 log lines:
+checking for ruby... false
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking target system type... x86_64-pc-linux-gnu
+checking for gcc... no
+checking for cc... no
+checking for cl.exe... no
+configure: error: in `/tmp/ruby-build.20200422221555.500.H8sKp7/ruby-2.5.1':
+configure: error: no acceptable C compiler found in $PATH
+See `config.log' for more details
+marstrong@DESKTOP-ON1U0CR:~$
+marstrong@DESKTOP-ON1U0CR:~$
+marstrong@DESKTOP-ON1U0CR:~$ q
+
+Command 'q' not found, but can be installed with:
+
+sudo apt install python-q-text-as-data
+sudo apt install python3-q-text-as-data
+
+marstrong@DESKTOP-ON1U0CR:~$ ;
+-bash: syntax error near unexpected token `;'
+marstrong@DESKTOP-ON1U0CR:~$ 213fdadsfs
+213fdadsfs: command not found
+marstrong@DESKTOP-ON1U0CR:~$
+marstrong@DESKTOP-ON1U0CR:~$

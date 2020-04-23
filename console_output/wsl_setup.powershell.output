@@ -1,0 +1,56 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+                                                                                                                        Try the new cross-platform PowerShell https://aka.ms/pscore6                                                                                                                                                                                    PS C:\WINDOWS\system32> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux                                                                                                                                    
+Path          :
+Online        : True
+RestartNeeded : False
+
+
+
+PS C:\WINDOWS\system32> dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+>> dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+Deployment Image Servicing and Management tool
+Version: 10.0.19041.1
+
+Image Version: 10.0.19041.208
+
+Enabling feature(s)
+[==========================100.0%==========================]
+The operation completed successfully.
+
+Deployment Image Servicing and Management tool
+Version: 10.0.19041.1
+
+Image Version: 10.0.19041.208
+
+Enabling feature(s)
+[==========================100.0%==========================]
+The operation completed successfully.
+PS C:\WINDOWS\system32> wsl -l
+Windows Subsystem for Linux has no installed distributions.
+Distributions can be installed by visiting the Microsoft Store:
+https://aka.ms/wslstore
+PS C:\WINDOWS\system32> Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
+PS C:\WINDOWS\system32> wsl -l
+Windows Subsystem for Linux has no installed distributions.
+Distributions can be installed by visiting the Microsoft Store:
+https://aka.ms/wslstore
+PS C:\WINDOWS\system32> Add-AppxPackage .\Ubuntu.appx
+PS C:\WINDOWS\system32> wsl -l
+Windows Subsystem for Linux has no installed distributions.
+Distributions can be installed by visiting the Microsoft Store:
+https://aka.ms/wslstore
+PS C:\WINDOWS\system32> wsl -l
+Windows Subsystem for Linux Distributions:
+Ubuntu (Default)
+PS C:\WINDOWS\system32> wsl --set-version Ubuntu 2
+Conversion in progress, this may take a few minutes...
+WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
+PS C:\WINDOWS\system32> wsl --set-version Ubuntu 2
+Conversion in progress, this may take a few minutes...
+For information on key differences with WSL 2 please visit https://aka.ms/wsl2
+Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.
+For information please visit https://aka.ms/wsl2-install
+PS C:\WINDOWS\system32>
+
