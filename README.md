@@ -98,3 +98,6 @@ Git
 
 https://gitforwindows.org/
 https://help.github.com/en/github/using-git/caching-your-github-password-in-git
+
+Use Windows Credential Manager to store GitHub credentials
+https://snede.net/git-does-not-remember-username-password/
