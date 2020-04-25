@@ -4,12 +4,37 @@ Instructions for setting up a development environment on your Windows computer. 
 https://open.appacademy.io/learn/swe-in-person/software-engineering-foundations/ruby-environment-setup
 
 
+Chrome
+======
+Install Google Chrome: https://www.google.com/chrome/
+
+
+Visual Studio Code
+=================
+Setup Visual Studio Code: https://code.visualstudio.com/docs/setup/
+
+Install the user setup: https://code.visualstudio.com/docs/setup/windows
+
+Select Additional Tasks
++ Add “Open with Code” action to Windows Explorer file context menu
++ Add “Open with Code” action to Windows Explorer directory context menu
++ Register Code as an editor for supported file types
++ Add to PATH (requires shell restart)
+
+Extensions
+---------
++ Remote - WSL
+Install: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl
+Developing in WSL documentation: https://code.visualstudio.com/docs/remote/wsl
+WSL step-by-step tutorial: https://code.visualstudio.com/remote-tutorials/wsl/getting-started
+
+
+
 
 Windows Insider Program
 =======================
-
+Join the Microsoft Windows Insider program to download the latest version of Windows 10
 Microsoft Windows Insider: https://insider.windows.com/en-us/
-
 
 
 Windows Subsystem for Linux
@@ -32,67 +57,36 @@ Install WSL 2: https://docs.microsoft.com/en-us/windows/wsl/wsl2-install
 
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
 
+Things you might have encountered/have questions about:
+--------------
++ What is MSYS2?
+ MSYS2 allows you to use many Unix/Linux tools and utilities inside of a Windows environment. Basically, it makes Windows more like Linux. We don't need MSYS2 since we won't actually be developing in the Windows environment -- we'll be using the Linux subsystem we installed instead.
+
++ What is MinGW?
+ MinGW is an open source software development environment for creating Windows applications. We'll be using the Linux subsystem we installed instead. 
 
 
-Chrome
-======
+BASH
+====
+Various ways of opening a bash console...
+---
 
-Install Google Chrome: https://www.google.com/chrome/
+The stuff no one tells you:
+---
+Home directory: /home/marstrong
+Home directory shortcut: ~
+The following commands will all do the same thing:
++ `cd /home/marstrong`
++ `cd ~`
++ `cd`
 
-Visual Studio Code
-=================
-
-Setup Visual Studio Code: https://code.visualstudio.com/docs/setup/
-
-Install the user setup: https://code.visualstudio.com/docs/setup/windows
-
-Select Additional Tasks
-+ Add “Open with Code” action to Windows Explorer file context menu
-+ Add “Open with Code” action to Windows Explorer directory context menu
-+ Register Code as an editor for supported file types
-+ Add to PATH (requires shell restart)
-
-Extensions
----------
-
-+ Remote - WSL
-Install: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl
-Developing in WSL documentation: https://code.visualstudio.com/docs/remote/wsl
-WSL step-by-step tutorial: https://code.visualstudio.com/remote-tutorials/wsl/getting-started
++ `.` current directory
++ `..` up one directory 
 
 
++ hidden files and directory start with `.`
++ `ls /home/marstrong -a` list all files in directory, including hidden files
 
-
-
-
-Windows Terminal
-================
-
-Install: https://www.microsoft.com/p/windows-terminal-preview/9n0dx20hk701?SilentAuth=1&wa=wsignin1.0&activetab=pivot%3Aoverviewtab
-
-
-
-
-RBENV
-======
-
-https://github.com/rbenv/rbenv-installer#rbenv-installer
-https://unix.stackexchange.com/questions/378060/gcc-error-no-acceptable-c-compiler-found-in-path/545756#545756?newreg=41bcf4b931f8449287d1eb828df10b1f
-
-
-
-
-POWERSHELL
-======
-https://www.howtogeek.com/163127/how-powershell-differs-from-the-windows-command-prompt/
-
-https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/
-
-
-https://haacked.com/archive/2011/12/19/get-git-for-windows.aspx/
-https://haacked.com/archive/2011/12/13/better-git-with-powershell.aspx/
-
-t
 
 Git
 ===
@@ -124,8 +118,9 @@ Create GitHub account
 Configure Git
 ------------
 Open a new bash console
-+ clone repo using bash command line
-Make some changes to Readme
+Clone your repo repo using bash command line
++ `git clone https://github.com/marstrong/windows-dev-setup.git`
+Make some changes to the readme
 + `git add -A`
 + `git commit -m "first commit"`
 
@@ -150,24 +145,62 @@ The next time you attempt to push to GitHub, Git will prompt you for your userna
 This is not particularly secure, but you probably already knew that. 
 
 Make some more changes, then push again
-+ `git add -
++ `git add --all`
++ `git commit -m "test git-credential-store"`
++ `git push`
+You won't be prompted for any credentials, nor will you ever again. 
+
+There are plenty of other ways to store your GitHub password, and you're welcome to explore them!
++ Use Git-Credential_Manager-for-Windows to store your github password: 
+    - https://snede.net/git-does-not-remember-username-password/
+    - https://github.com/Microsoft/Git-Credential-Manager-for-Windows
++ Download GCM installer: https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest
+
+
+
+
+So far, we have been configuring Git at the global level using `git config --global`. This stores our configuration settings in a file at the root of the home directory: `~/.gitconfig`.
+
+Configuration settings that are specific to a single repository can be set using `git config --local`. The settings are stored in a file at the root of the repository's directory: `/repo/.git/config`
+
+If you ever lose track of where your various configurations are coming from, run the following command:
++ `git config --list --show-origin`
+
+
+Windows Terminal
+================
+
+Install: https://www.microsoft.com/p/windows-terminal-preview/9n0dx20hk701?SilentAuth=1&wa=wsignin1.0&activetab=pivot%3Aoverviewtab
+
+
+
+
+
+POWERSHELL
+======
+https://www.howtogeek.com/163127/how-powershell-differs-from-the-windows-command-prompt/
+
+https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/
+
+
+https://haacked.com/archive/2011/12/19/get-git-for-windows.aspx/
+https://haacked.com/archive/2011/12/13/better-git-with-powershell.aspx/
+
+
+RBENV
+======
+
+https://github.com/rbenv/rbenv-installer#rbenv-installer
+https://unix.stackexchange.com/questions/378060/gcc-error-no-acceptable-c-compiler-found-in-path/545756#545756?newreg=41bcf4b931f8449287d1eb828df10b1f
+
+NEXT
+====
 
 
 
 
 
 
-    *** Please tell me who you are.
-
-    Run
-
-    git config --global user.email "you@example.com"
-    git config --global user.name "Your Name"
-
-    to set your account's default identity.
-    Omit --global to set the identity only in this repository.
-
-    fatal: empty ident name (for <marstrong@DESKTOP-ON1U0CR.localdomain>) not allowed
 
 
 
@@ -177,34 +210,13 @@ Make some more changes, then push again
 
 
 
-Use Git-Credential_Manager-for-Windows to store your github password
-https://github.com/Microsoft/Git-Credential-Manager-for-Windows
-Download GCM installer: https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest
 
 
 
-https://gitforwindows.org/
-https://help.github.com/en/github/using-git/caching-your-github-password-in-git
-
-Use Windows Credential Manager to store GitHub credentials
-https://snede.net/git-does-not-remember-username-password/
 
 
 
-user.name=marstrong
-user.email=marshallstrong123@gmail.com
-credential.helper=manager
-credential.manager=wincred
-core.repositoryformatversion=0
-core.filemode=false
-core.bare=false
-core.logallrefupdates=true
-core.ignorecase=true
-remote.origin.url=https://github.com/marstrong/windows-dev-setup.git
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.master.remote=origin
-branch.master.merge=refs/heads/master
-branch.console_output_files.remote=origin
-branch.console_output_files.merge=refs/heads/console_output_files
-branch.more_console_history.remote=origin
-branch.more_console_history.merge=refs/heads/more_console_history
+
+
+
+

@@ -1,0 +1,816 @@
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git status
+On branch more_console_history
+nothing to commit, working tree clean
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git status
+On branch more_console_history
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)   (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add -A                                     marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git commit -m "use Windows Credential Manager for GitHub"
+[more_console_history a4128fc] use Windows Credential Manager for GitHub
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+fatal: The current branch more_console_history has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin more_console_history
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push --set-upstream origin more_console_history
+git: 'credential-manager' is not a git command. See 'git --help'.
+Username for 'https://github.com': ^C
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ 
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ 
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push --set-upstream origin more_console_history
+git: 'credential-manager' is not a git command. See 'git --help'.
+Username for 'https://github.com': ^C
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ 
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ 
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global credential.helper wincred
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ 
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ 
+user.email=marshallstrong123@gmail.com
+credential.helper=wincred
+credential.manager=wincred
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+remote.origin.url=https://github.com/marstrong/windows-dev-setup.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+branch.console_output_files.remote=origin
+branch.console_output_files.merge=refs/heads/console_output_files
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git status
+On branch more_console_history
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add -A
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git commit -m "testing Git Credential Manager for Windows"
+[more_console_history e4c089c] testing Git Credential Manager for Windows
+ 1 file changed, 6 insertions(+)
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+fatal: The current branch more_console_history has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin more_console_history
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push --set-upstream origin more_console_history
+git: 'credential-wincred' is not a git command. See 'git --help'.
+Username for 'https://github.com': marstrong
+Password for 'https://marstrong@github.com': 
+git: 'credential-wincred' is not a git command. See 'git --help'.
+Counting objects: 14, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 9.57 KiB | 426.00 KiB/s, done.
+Total 14 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'more_console_history' on GitHub by visiting:
+remote:      https://github.com/marstrong/windows-dev-setup/pull/new/more_console_history
+remote: 
+To https://github.com/marstrong/windows-dev-setup.git
+ * [new branch]      more_console_history -> more_console_history
+Branch 'more_console_history' set up to track remote branch 'more_console_history' from 'origin'.
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add -A
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add -A
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git commit -m "testing again"
+[more_console_history d184700] testing again
+ 1 file changed, 1 insertion(+)
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+git: 'credential-wincred' is not a git command. See 'git --help'.
+Username for 'https://github.com': ^C
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global credential.helper manager
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+git: 'credential-manager' is not a git command. See 'git --help'.
+Username for 'https://github.com': ^C
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --list
+user.name=marstrong
+user.email=marshallstrong123@gmail.com
+credential.helper=manager
+credential.manager=wincred
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+remote.origin.url=https://github.com/marstrong/windows-dev-setup.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+branch.console_output_files.remote=origin
+branch.console_output_files.merge=refs/heads/console_output_files
+branch.more_console_history.remote=origin
+branch.more_console_history.merge=refs/heads/more_console_history
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --unset-all
+error: wrong number of arguments
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --unset credential.manager
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --unset credential.manager
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --list
+user.name=marstrong
+user.email=marshallstrong123@gmail.com
+credential.helper=manager
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --unset credential.helper
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --system --list
+fatal: unable to read config file '/etc/gitconfig': No such file or directory
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --local --list
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+remote.origin.url=https://github.com/marstrong/windows-dev-setup.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+branch.console_output_files.remote=origin
+branch.console_output_files.merge=refs/heads/console_output_files
+branch.more_console_history.remote=origin
+branch.more_console_history.merge=refs/heads/more_console_history
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --list
+user.name=marstrong
+user.email=marshallstrong123@gmail.com
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global credential.helper manager
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --list
+user.name=marstrong
+user.email=marshallstrong123@gmail.com
+credential.helper=manager
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git status
+On branch more_console_history
+Your branch is ahead of 'origin/more_console_history' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+git: 'credential-manager' is not a git command. See 'git --help'.
+Username for 'https://github.com': ^C
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git help -a
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+available git commands in '/usr/lib/git-core'
+
+  add                       column                    fmt-merge-msg             ls-tree                   pack-refs                 request-pull              symbolic-ref
+  add--interactive          commit                    for-each-ref              mailinfo                  patch-id                  rerere                    tag
+  am                        commit-tree               format-patch              mailsplit                 prune                     reset                     unpack-file
+  annotate                  config                    fsck                      merge                     prune-packed              rev-list                  unpack-objects
+  apply                     count-objects             fsck-objects              merge-base                pull                      rev-parse                 update-index
+  archive                   credential                gc                        merge-file                push                      revert                    update-ref
+  bisect                    credential-cache          get-tar-commit-id         merge-index               quiltimport               rm                        update-server-info
+  bisect--helper            credential-cache--daemon  grep                      merge-octopus             read-tree                 send-pack                 upload-archive
+  blame                     credential-store          hash-object               merge-one-file            rebase                    sh-i18n--envsubst         upload-pack
+  branch                    daemon                    help                      merge-ours                rebase--helper            shell                     var
+  bundle                    describe                  http-backend              merge-recursive           receive-pack              shortlog                  verify-commit
+  cat-file                  diff                      http-fetch                merge-resolve             reflog                    show                      verify-pack
+  check-attr                diff-files                http-push                 merge-subtree             remote                    show-branch               verify-tag
+  check-ignore              diff-index                imap-send                 merge-tree                remote-ext                show-index                web--browse
+  check-mailmap             diff-tree                 index-pack                mergetool                 remote-fd                 show-ref                  whatchanged
+  check-ref-format          difftool                  init                      mktag                     remote-ftp                stage                     worktree
+  checkout                  difftool--helper          init-db                   mktree                    remote-ftps               stash                     write-tree
+  checkout-index            fast-export               instaweb                  mv                        remote-http               status
+  cherry                    fast-import               interpret-trailers        name-rev                  remote-https              stripspace
+  cherry-pick               fetch                     log                       notes                     remote-testsvn            submodule
+  clean                     fetch-pack                ls-files                  pack-objects              repack                    submodule--helper
+  clone                     filter-branch             ls-remote                 pack-redundant            replace                   subtree
+
+git commands available from elsewhere on your $PATH
+
+  gui  lfs
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git credential
+usage: git credential [fill|approve|reject]
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global credential.helper store
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --list
+user.name=marstrong
+user.email=marshallstrong123@gmail.com
+credential.helper=store
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git status
+On branch more_console_history
+Your branch is ahead of 'origin/more_console_history' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+Username for 'https://github.com': marstrong
+Password for 'https://marstrong@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 319 bytes | 106.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/marstrong/windows-dev-setup.git
+   e4c089c..d184700  more_console_history -> more_console_history
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add -A
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git commit -m "another test"
+[more_console_history cd1f553] another test
+ 1 file changed, 20 insertions(+)
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 602 bytes | 200.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/marstrong/windows-dev-setup.git
+   d184700..cd1f553  more_console_history -> more_console_history
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ code ~/.git-credentials
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git statusOn branch more_console_history
+Your branch is up to date with 'origin/more_console_history'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+        modified:   console_output/git_setup.bash.output
+
+no changes added to commit (use "git add" and/or "git commit -a")
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add -A
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git commit -m "Git installation instructions"
+[more_console_history 26be263] Git installation instructions
+ 2 files changed, 26 insertions(+)
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+Username for 'https://github.com': marstrong
+Password for 'https://marstrong@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 895 bytes | 298.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/marstrong/windows-dev-setup.git
+   cd1f553..26be263  more_console_history -> more_console_history
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --list
+user.name=marstrong
+user.email=marshallstrong123@gmail.com
+credential.helper=store
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --unset user.name
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --unset user.email
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global --unset credential.helper
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add -A
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git status
+On branch more_console_history
+Your branch is up to date with 'origin/more_console_history'.
+
+nothing to commit, working tree clean
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add -A
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git commit -m "documenting setting up GitHub account"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <marstrong@DESKTOP-ON1U0CR.localdomain>) not allowed
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global credential.helper
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global credential.helper store
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global user.email "marshallstrong123@gmail.com"
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global user.email 
+marshallstrong123@gmail.com
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global credential.helper 
+store
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global credential.helper store
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ cd
+marstrong@DESKTOP-ON1U0CR:~$ ls
+marstrong@DESKTOP-ON1U0CR:~$ -ls
+
+Command '-ls' not found, did you mean:
+
+  command 'jls' from deb sleuthkit
+  command 'i-ls' from deb integrit
+  command 'ils' from deb sleuthkit
+  command 'ols' from deb speech-tools
+  command 'bls' from deb bacula-sd
+  command 'ls' from deb coreutils
+  command 'fls' from deb sleuthkit
+  command 'als' from deb atool
+  command 'hls' from deb hfsutils
+
+Try: sudo apt install <deb name>
+
+marstrong@DESKTOP-ON1U0CR:~$ -l
+-l: command not found
+marstrong@DESKTOP-ON1U0CR:~$ cd .
+./              ../             .cache/         .config/        .rbenv/         .vscode-server/ 
+marstrong@DESKTOP-ON1U0CR:~$ cd /etc
+marstrong@DESKTOP-ON1U0CR:/etc$ ls
+NetworkManager          ca-certificates.conf  dhcp                 host.conf        ldap            manpath.config       overlayroot.local.conf   rc2.d          shadow       tmpfiles.d
+X11                     calendar              dnsmasq.d            hostname         legal           mdadm                pam.conf                 rc3.d          shadow-      ucf.conf
+acpi                    cloud                 dnsmasq.d-available  hosts            libaudit.conf   mime.types           pam.d                    rc4.d          shells       udev
+adduser.conf            console-setup         dpkg                 hosts.allow      locale.alias    mke2fs.conf          passwd                   rc5.d          skel         ufw
+alternatives            cron.d                ec2_version          hosts.deny       locale.gen      modprobe.d           passwd-                  rc6.d          sos.conf     update-manager
+apm                     cron.daily            environment          init.d           localtime       modules              perl                     rcS.d          ssh          update-motd.d
+apparmor                cron.hourly           ethertypes           initramfs-tools  logcheck        modules-load.d       pm                       resolv.conf    ssl          update-notifier
+apparmor.d              cron.monthly          fonts                inputrc          login.defs      mtab                 polkit-1                 rmt            subgid       updatedb.conf
+apport                  cron.weekly           fstab                iproute2         logrotate.conf  nanorc               pollinate                rpc            subgid-      vim
+apt                     crontab               fuse.conf            iscsi            logrotate.d     netplan              popularity-contest.conf  rsyslog.conf   subuid       vmware-tools
+at.deny                 cryptsetup-initramfs  gai.conf             issue            lsb-release     network              profile                  rsyslog.d      subuid-      vtrgb
+bash.bashrc             crypttab              groff                issue.net        ltrace.conf     networkd-dispatcher  profile.d                screenrc       sudoers      wgetrc
+bash_completion         dbus-1                group                kernel           lvm             networks             protocols                securetty      sudoers.d    xdg
+bash_completion.d       debconf.conf          group-               kernel-img.conf  machine-id      newt                 pulse                    security       sysctl.conf  zsh_command_not_found
+bindresvport.blacklist  debian_version        gshadow              landscape        magic           nsswitch.conf        python3                  selinux        sysctl.d
+binfmt.d                default               gshadow-             ld.so.cache      magic.mime      opt                  python3.6                sensors.d      systemd
+byobu                   deluser.conf          gss                  ld.so.conf       mailcap         os-release           rc0.d                    sensors3.conf  terminfo
+ca-certificates         depmod.d              hdparm.conf          ld.so.conf.d     mailcap.order   overlayroot.conf     rc1.d                    services       timezone
+marstrong@DESKTOP-ON1U0CR:/etc$ cd
+marstrong@DESKTOP-ON1U0CR:~$ git config --list --show-origin
+file:/home/marstrong/.gitconfig credential.helper=store
+file:/home/marstrong/.gitconfig user.email=marshallstrong123@gmail.com
+marstrong@DESKTOP-ON1U0CR:~$ cd /home/marstrong/
+marstrong@DESKTOP-ON1U0CR:~$ ls
+marstrong@DESKTOP-ON1U0CR:~$ l
+marstrong@DESKTOP-ON1U0CR:~$ ls
+marstrong@DESKTOP-ON1U0CR:~$ code .gitconfig
+marstrong@DESKTOP-ON1U0CR:~$ code .gitconfig
+marstrong@DESKTOP-ON1U0CR:~$ code ~/.gitconfig
+marstrong@DESKTOP-ON1U0CR:~$ git config --list --show-origin
+marstrong@DESKTOP-ON1U0CR:~$ git config --global user.email "marshallstrong123@gmail.com"
+marstrong@DESKTOP-ON1U0CR:~$ git config --global user.name "marstrong"
+marstrong@DESKTOP-ON1U0CR:~$ git config --global color.ui true
+marstrong@DESKTOP-ON1U0CR:~$ git config --global credential.helper 'store'
+marstrong@DESKTOP-ON1U0CR:~$ cd /mnt/c/Users/marstrong/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong$ ls
+'3D Objects'         Downloads              'My Documents'                                                                                  Pictures       Templates
+ AppData             Favorites               NTUSER.DAT                                                                                     PrintHood      Videos
+'Application Data'   IntelGraphicsProfiles   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                        Recent         bin
+ Contacts            Links                   NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms  'Saved Games'   ntuser.dat.LOG1
+ Cookies            'Local Settings'         NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms   Searches       ntuser.dat.LOG2
+ Desktop             MicrosoftEdgeBackups    NetHood                                                                                        SendTo         ntuser.ini
+ Documents           Music                   OneDrive                                                                                      'Start Menu'    source
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong$ cd source/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source$ ls
+ProgressTracker--Strikes.txt                                                                     desktop.ini                           marstrong_dummy.zip     tgres
+Setup.Def.en-US_O365HomePremRetail_00a7429a-6a0f-40d6-b63d-c9f2da49589a_TX_PR_Platform_def_.exe  easy_forms_demo.zip                   ninety-nine-cats        vscode-macOs-keyboard-shortcuts-macos.pdf
+StudyGuide-Rails2Assessment.rb                                                                   javascript                            oops_windows-dev-setup  windows-dev-setup
+aA-classwork                                                                                     javascript1-prep-master.zip           postgresql-10.11
+bash_profile                                                                                     marshall_strong_rails2assessment      postgresql-10.11.tar
+cats                                                                                             marshall_strong_rails2assessment.zip  rails_2_practice
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source$ cd windows-dev-setup/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ ls
+README.md  console_output
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ code .gitconfig
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --local user.name "mars"
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --local user.name 
+mars
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ code .gitconfig
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --list --show-origin
+file:/home/marstrong/.gitconfig user.email=marshallstrong123@gmail.com
+file:/home/marstrong/.gitconfig user.name=marstrong
+file:/home/marstrong/.gitconfig color.ui=true
+file:/home/marstrong/.gitconfig credential.helper=store
+file:.git/config        core.repositoryformatversion=0
+file:.git/config        core.filemode=false
+file:.git/config        core.bare=false
+file:.git/config        core.logallrefupdates=true
+file:.git/config        core.ignorecase=true
+file:.git/config        remote.origin.url=https://github.com/marstrong/windows-dev-setup.git
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config        branch.master.remote=origin
+file:.git/config        branch.master.merge=refs/heads/master
+file:.git/config        branch.console_output_files.remote=origin
+file:.git/config        branch.console_output_files.merge=refs/heads/console_output_files
+file:.git/config        branch.more_console_history.remote=origin
+file:.git/config        branch.more_console_history.merge=refs/heads/more_console_history
+file:.git/config        user.name=mars
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ code .git
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ cd /mnt/c/Users/marstrong/source/windows-dev-setup/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ cd 
+marstrong@DESKTOP-ON1U0CR:~$ cd /mnt/c/Users/marstrong/source/windows-dev-setup/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ cd /home/
+marstrong@DESKTOP-ON1U0CR:/home$ cd
+marstrong@DESKTOP-ON1U0CR:~$ cd /mnt/c/Users/marstrong/source/windows-dev-setup/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ cd ~
+marstrong@DESKTOP-ON1U0CR:~$ ls
+marstrong@DESKTOP-ON1U0CR:~$ cd home/
+bash: cd: home/: No such file or directory
+marstrong@DESKTOP-ON1U0CR:~$ cd home
+bash: cd: home: No such file or directory
+marstrong@DESKTOP-ON1U0CR:~$ cd /home
+marstrong@DESKTOP-ON1U0CR:/home$ ls
+marstrong
+marstrong@DESKTOP-ON1U0CR:/home$ cd /home/marstrong
+marstrong@DESKTOP-ON1U0CR:~$ ls
+marstrong@DESKTOP-ON1U0CR:~$ cd /home
+marstrong@DESKTOP-ON1U0CR:/home$ ls /~
+ls: cannot access '/~': No such file or directory
+marstrong@DESKTOP-ON1U0CR:/home$ cd /~
+bash: cd: /~: No such file or directory
+marstrong@DESKTOP-ON1U0CR:/home$ cd ~
+marstrong@DESKTOP-ON1U0CR:~$ cd /mnt/c/Users/marstrong/source/windows-dev-setup/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ cd /home/marstrong/
+marstrong@DESKTOP-ON1U0CR:~$ cd /mnt/c/Users/marstrong/source/windows-dev-setup/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ cd ~
+marstrong@DESKTOP-ON1U0CR:~$ cd /mnt/c/Users/marstrong/source/windows-dev-setup/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ ~
+bash: /home/marstrong: Is a directory
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ cd
+marstrong@DESKTOP-ON1U0CR:~$ ls
+marstrong@DESKTOP-ON1U0CR:~$ ls -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .cache  .config  .git-credentials  .gitconfig  .profile  .rbenv  .sudo_as_admin_successful  .viminfo  .vscode-server
+marstrong@DESKTOP-ON1U0CR:~$ cd /mnt/c/Users/marstrong/source/windows-dev-setup/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ ~ ls -a
+bash: /home/marstrong: Is a directory
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ ls /home/marstrong -a
+.  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  .cache  .config  .git-credentials  .gitconfig  .profile  .rbenv  .sudo_as_admin_successful  .viminfo  .vscode-server
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git config --list --show-origin
+file:/home/marstrong/.gitconfig user.email=marshallstrong123@gmail.com
+file:/home/marstrong/.gitconfig user.name=marstrong
+file:/home/marstrong/.gitconfig color.ui=true
+file:/home/marstrong/.gitconfig credential.helper=store
+file:.git/config        core.repositoryformatversion=0
+file:.git/config        core.filemode=false
+file:.git/config        core.bare=false
+file:.git/config        core.logallrefupdates=true
+file:.git/config        core.ignorecase=true
+file:.git/config        remote.origin.url=https://github.com/marstrong/windows-dev-setup.git
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config        branch.master.remote=origin
+file:.git/config        branch.master.merge=refs/heads/master
+file:.git/config        branch.console_output_files.remote=origin
+file:.git/config        branch.console_output_files.merge=refs/heads/console_output_files
+file:.git/config        branch.more_console_history.remote=origin
+file:.git/config        branch.more_console_history.merge=refs/heads/more_console_history
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ 
+
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ cd
+marstrong@DESKTOP-ON1U0CR:~$ git config --list
+user.name=marstrong
+user.email=marshallstrong123@gmail.com
+credential.helper=store
+marstrong@DESKTOP-ON1U0CR:~$ git config --global --unset credential.helper
+marstrong@DESKTOP-ON1U0CR:~$ git config --global credential.helper manager
+marstrong@DESKTOP-ON1U0CR:~$ cd /mnt/c/Users/marstrong/source/windows-dev-setup/
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git status
+On branch more_console_history
+Your branch is up to date with 'origin/more_console_history'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add -A
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git commit -m "demo"
+[more_console_history 0d035ad] demo
+ 1 file changed, 50 insertions(+)
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+Username for 'https://github.com': marstrong
+Password for 'https://marstrong@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.05 KiB | 269.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/marstrong/windows-dev-setup.git
+   26be263..0d035ad  more_console_history -> more_console_history
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git add --all
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git commit -m "test git-credential-store"
+[more_console_history 4a7da8d] test git-credential-store
+ 1 file changed, 14 insertions(+), 9 deletions(-)
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 599 bytes | 199.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/marstrong/windows-dev-setup.git
+   0d035ad..4a7da8d  more_console_history -> more_console_history
+marstrong@DESKTOP-ON1U0CR:/mnt/c/Users/marstrong/source/windows-dev-setup$ 
