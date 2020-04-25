@@ -115,6 +115,56 @@ Run the .exe file you just downloaded. This will open a Git Setup dialog.
 + Select 'Enable file system caching' and 'Enable Git Credential Manager' ?
 Click the 'Install' button
 
+Create GitHub account
+---------------------
++ Email, Username, Password
++ Create new repo, initialize with readme
++ Copy link for cloning repo
+
+Open a new bash terminal
++ clone repo using bash command line
+
+At this point, if you attempt to commit changes, Git will ask who you are. It will then prompt you to run the following commands.
++ `git config --global user.email "you@example.com"`
++ `git config --global user.name "Your Name"`
+Replace "you@example.com" with your own email inside double quotes
+Replace "Your Name" with your own GitHub username
+
+These values are stored in the .gitconfig file
+Open your .gitconfig file
++ `code ~/.gitconfig`
+You should notice that your email and username have been added to the file
+Let's tell git to use pretty colors
++ `git config --global color.ui true`
+You should immediately see the change reflected in the .gitconfig file
+Your GitHub password will be stored separately. There are several different ways to do this. The simplest is to use git-credential-store.
++ `git config --global credential.helper 'store'`
+The next time you 
+
+
+
+
++ Make some changes to Readme
++ `git add -A`
++ `git commit -m "first commit"`
+
+
+
+    *** Please tell me who you are.
+
+    Run
+
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+
+    to set your account's default identity.
+    Omit --global to set the identity only in this repository.
+
+    fatal: empty ident name (for <marstrong@DESKTOP-ON1U0CR.localdomain>) not allowed
+
+Configure Git
+------------
+Open a new bash console
 
 
 
