@@ -97,6 +97,31 @@ t
 Git
 ===
 
+Download Git for Windows
+------------------------
+Link: https://gitforwindows.org/
+Click the 'Download' button
+(Direct Link: https://github.com/git-for-windows/git/releases/download/v2.26.2.windows.1/Git-2.26.2-64-bit.exe)
+
+Install Git for Windows
+------------------------
+Run the .exe file you just downloaded. This will open a Git Setup dialog.
++ Default options are fine for the 'Select Components' section.
++ Select Visual Studio Code as Git's default editor.
++ Select 'Git from the command line and also from 3rd-party software'
++ Select 'Use the OpenSSL library' for HTTPS connections
++ Select 'Checkout Windows-style, commit Unix-style line endings'
++ Select 'Use Windows' default console window' as the terminal emulator to use with Git Bash
++ Select 'Enable file system caching' and 'Enable Git Credential Manager' ?
+Click the 'Install' button
+
+
+
+
+
+
+
+
 Use Git-Credential_Manager-for-Windows to store your github password
 https://github.com/Microsoft/Git-Credential-Manager-for-Windows
 Download GCM installer: https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest
