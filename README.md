@@ -108,3 +108,23 @@ https://help.github.com/en/github/using-git/caching-your-github-password-in-git
 
 Use Windows Credential Manager to store GitHub credentials
 https://snede.net/git-does-not-remember-username-password/
+
+
+
+user.name=marstrong
+user.email=marshallstrong123@gmail.com
+credential.helper=manager
+credential.manager=wincred
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+remote.origin.url=https://github.com/marstrong/windows-dev-setup.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+branch.console_output_files.remote=origin
+branch.console_output_files.merge=refs/heads/console_output_files
+branch.more_console_history.remote=origin
+branch.more_console_history.merge=refs/heads/more_console_history
