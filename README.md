@@ -96,6 +96,12 @@ https://haacked.com/archive/2011/12/13/better-git-with-powershell.aspx/
 Git
 ===
 
+Use Git-Credential_Manager-for-Windows to store your github password
+https://github.com/Microsoft/Git-Credential-Manager-for-Windows
+Download GCM installer: https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest
+
+
+
 https://gitforwindows.org/
 https://help.github.com/en/github/using-git/caching-your-github-password-in-git
 
