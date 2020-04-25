@@ -121,10 +121,15 @@ Create GitHub account
 + Create new repo, initialize with readme
 + Copy link for cloning repo
 
-Open a new bash terminal
+Configure Git
+------------
+Open a new bash console
 + clone repo using bash command line
+Make some changes to Readme
++ `git add -A`
++ `git commit -m "first commit"`
 
-At this point, if you attempt to commit changes, Git will ask who you are. It will then prompt you to run the following commands.
+At this point, if you attempt to push your changes to GitHub, Git will ask who you are. It will then prompt you to run the following commands.
 + `git config --global user.email "you@example.com"`
 + `git config --global user.name "Your Name"`
 Replace "you@example.com" with your own email inside double quotes
@@ -137,16 +142,18 @@ You should notice that your email and username have been added to the file
 Let's tell git to use pretty colors
 + `git config --global color.ui true`
 You should immediately see the change reflected in the .gitconfig file
+
 Your GitHub password will be stored separately. There are several different ways to do this. The simplest is to use git-credential-store.
 + `git config --global credential.helper 'store'`
-The next time you 
+The next time you attempt to push to GitHub, Git will prompt you for your username and password. Git will save the credentials you entered in an unencrypted text file. 
++ `code ~/.git-credentials`
+This is not particularly secure, but you probably already knew that. 
+
+Make some more changes, then push again
++ `git add -
 
 
 
-
-+ Make some changes to Readme
-+ `git add -A`
-+ `git commit -m "first commit"`
 
 
 
@@ -162,9 +169,7 @@ The next time you
 
     fatal: empty ident name (for <marstrong@DESKTOP-ON1U0CR.localdomain>) not allowed
 
-Configure Git
-------------
-Open a new bash console
+
 
 
 
