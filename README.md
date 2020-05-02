@@ -30,19 +30,23 @@ Join the Microsoft Windows Insider program to download the latest version of Win
 Microsoft Windows Insider: https://insider.windows.com/en-us/
 
 
-Windows Subsystem for Linux
+Windows Subsystem for Linux (WSL)
 ===========================
 With WSL, you can install and run Linux distributions on Windows. This enables you to develop and test your source code on Linux while still working locally on your Windows machine.
 
 WSL FAQ: https://docs.microsoft.com/en-us/windows/wsl/faq
 
-WSL
----
-
 Install WSL: https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
+VS Code Extension:
+---------
++ Remote - WSL
+ Install: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl
+ Developing in WSL documentation: https://code.visualstudio.com/docs/remote/wsl
+ WSL step-by-step tutorial: https://code.visualstudio.com/remote-tutorials/wsl/getting-started
+
 WSL 2
------
+====
 
 Install WSL 2: https://docs.microsoft.com/en-us/windows/wsl/wsl2-install
 
@@ -51,17 +55,21 @@ Install WSL 2: https://docs.microsoft.com/en-us/windows/wsl/wsl2-install
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
 
 Things you might have encountered/have questions about:
---------------
+==========
 + What is MSYS2?
  MSYS2 allows you to use many Unix/Linux tools and utilities inside of a Windows environment. Basically, it makes Windows more like Linux. We don't need MSYS2 since we won't actually be developing in the Windows environment -- we'll be using the Linux subsystem we installed instead.
-
 + What is MinGW?
  MinGW is an open source software development environment for creating Windows applications. We'll be using the Linux subsystem we installed instead. 
+
+Ubuntu
+======
+About Ubuntu
 
 
 BASH
 ====
 Various ways of opening a bash console...
++ Ubnutu is best
 ---
 
 The stuff no one tells you:
@@ -183,16 +191,6 @@ https://haacked.com/archive/2011/12/19/get-git-for-windows.aspx/
 https://haacked.com/archive/2011/12/13/better-git-with-powershell.aspx/
 
 
-
-Visual Studio Code (Part 2)
-=================
-
-Extensions
----------
-+ Remote - WSL
- Install: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl
- Developing in WSL documentation: https://code.visualstudio.com/docs/remote/wsl
- WSL step-by-step tutorial: https://code.visualstudio.com/remote-tutorials/wsl/getting-started
 
 
 
@@ -322,7 +320,7 @@ Install
 
 
 
-Node.js
+Node and Node Version Manager (NVM)
 =========
 Node.js will be our local JavaScript engine. This is used to run JavaScript code and run associated node commands.
 Again, we want to use a version manager with Node to help us manage potential conflicts between versions and dependencies. In this case we will be using NVM (Node Version Manager) to install/manage Node.js.
@@ -342,13 +340,101 @@ Set version 10.13.0 as default node version
 Verify install/config
 `which node` # => /Users/username/.nvm/versions/node/v10.13.0/bin/node
 
+Node Package Manager (NPM)
+=========================
 Node, like Ruby, comes with a package manager called NPM, which provides access to a whole ecosystem of libraries and tools we can use. 
 NPM comes pre-bundled with Node, so there is no additional work for us to do. 
-We don't need NPM to install any additional packages by default, as we will be installing them on a per-project basis.
+Packages are installed as-needed on a per-project basis, and are generally not installed globally. 
+The exceptions are linters and snippets, which are helpful to have on all projects. 
+
+VS Code Extensions
+================
+About VS Code Extensions...
+Extensions can be installed from the command line -- [documentation](https://code.visualstudio.com/docs/editor/command-line#_working-with-extensions)
+
+Packages and Extensions
+=====================
+
+jshint
+-----
+Install JSHint NPM package: `npm install --global jshint`
+Install VS Code extension: `code --install-extension dbaeumer.jshint`
+VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint
+# Tell JSHint to use be aware of ES6 syntax. 
+cat >~/.jshintrc <<EOL
+{
+  "esversion": 6
+}
+EOL
+
+
+Remote - WSL
+---------
+Integrates Windows Subsystem for Linux into VS Code
+Install VS Code extension: `code --install-extension ms-vscode-remote.remote-wsl`
+VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl
+https://code.visualstudio.com/remote-tutorials/wsl/getting-started
+Developing in WSL documentation: https://code.visualstudio.com/docs/remote/wsl
+WSL step-by-step tutorial: https://code.visualstudio.com/remote-tutorials/wsl/getting-started
+
+Atom Keymap
+-----
+Popular Atom keybindings for Visual Studio Code
+Install VS Code extension: `code --install-extension ms-vscode.atom-keybindings`
+VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings
+# Update VS Code settings.
+cat >~/.vscode-server/data/Machine/settings.json <<EOL
+{
+    "atomKeymap.promptV3Features": true,
+}
+EOL
+
+Active File In StatusBar
+--------
+Add statusbar entry to show path for currently active file.
+Install VS Code extension: `code --install-extension RoscoP.ActiveFileInStatusBar`
+VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=RoscoP.ActiveFileInStatusBar
+
+Highlight Matching Tag
+-----
+Highlights matching closing and opening tags
+Install VS Code extension: `code --install-extension vincaslt.highlight-matching-tag`
+VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag
+
+
+Simple Ruby ERB
+-----
+Provides simple Ruby and ERB language, code snippets and ERB tag helper support for Visual Studio Code without messing with linting or debugging
+Install VS Code extension: `code --install-extension vortizhe.simple-ruby-erb`
+VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=vortizhe.simple-ruby-erb
+
+ERB-VSCode-Snippets
+-----
+A collection of Visual Studio Code snippets useful for writing ERB
+Install VS Code extension: `code --install-extension ZneuRay.erb-vscode-snippets`
+VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=ZneuRay.erb-vscode-snippets
+=======
 
 
 
+Live Share
+-----
+Collaboratively edit and debug with others in real time
+Install VS Code extension: `code --install-extension MS-vsliveshare.vsliveshare`
+VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare
 
-test test
-xxx
 
+VS Code Settings
+=====
+# Update VS Code settings.
+cat >~/.vscode-server/data/Machine/settings.json <<EOL
+{
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "editor.rulers": [80],
+    "emmet.includeLanguages": {
+        "erb": "html",
+        "jsx": "html"
+    }
+}
+EOL
