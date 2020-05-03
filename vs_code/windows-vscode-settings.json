@@ -1,6 +1,5 @@
 {
   "debug.console.fontFamily": "FiraCode-Retina",
-
   "editor.detectIndentation": false,
   "editor.formatOnPaste": true,
   "editor.insertSpaces": true,
@@ -22,21 +21,17 @@
     "jsx": "js",
   },
   "[erb]": {},
-
   "files.associations": {
     "*.erb": "erb",
     "*.js": "javascript",
     "*.jsx": "javascriptreact",
   },
   "files.autoSave": "afterDelay",
-
   "html-css-class-completion.enableEmmetSupport": true,
-
   "javascript.updateImportsOnFileMove.enabled": "always",
   "jshint.options": {
     "esversion": 6
   },
-
   "launch": {
     "version": "0.2.0",
     "configurations": [
@@ -55,7 +50,6 @@
       }
     ]
   },
-
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Oceanic Next (Sublime)",
   "workbench.colorCustomizations": {
@@ -64,10 +58,6 @@
   },
   "workbench.panel.defaultLocation": "right",
   "workbench.startupEditor": "newUntitledFile",
-
-
-
-
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",

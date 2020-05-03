@@ -350,22 +350,53 @@ The exceptions are linters and snippets, which are helpful to have on all projec
 VS Code Extensions
 ================
 About VS Code Extensions...
+VS Code extensions need to be installed in Windows, not Ubuntu (use Command Prompt or PowerShell, not Bash)
+`code --list-extensions`
+`code --install-extension ms-vscode.cpptools`
+`code --uninstall-extension ms-vscode.csharp`
+
+
 Extensions can be installed from the command line -- [documentation](https://code.visualstudio.com/docs/editor/command-line#_working-with-extensions)
 
 Packages and Extensions
 =====================
 
-jshint
+jshint (from aA \setup_vscode-master\setup_vscode_linter.sh)
 -----
-Install JSHint NPM package: `npm install --global jshint`
-Install VS Code extension: `code --install-extension dbaeumer.jshint`
-VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint
+# Bash
+# Install JSHint NPM package:
+`npm install --global jshint`
 # Tell JSHint to use be aware of ES6 syntax. 
+`cat >~/.jshintrc <<EOL
+`{`
+`  "esversion": 6`
+`}`
+`EOL`
+
+cat > ~/.jshintrc <<EOL
+> {
+> "esversion": 6
+> }
+> EOL
+
+`cat > ~/.jshintrc <<EOL`
+`> {`
+`> "esversion": 6`
+`> }`
+`> EOL`
+
 cat >~/.jshintrc <<EOL
 {
   "esversion": 6
 }
 EOL
+
+# Powershell:
+# Install VS Code extension: 
+`code --install-extension dbaeumer.jshint`
+
+
+# VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint
 
 
 Remote - WSL
@@ -377,7 +408,7 @@ https://code.visualstudio.com/remote-tutorials/wsl/getting-started
 Developing in WSL documentation: https://code.visualstudio.com/docs/remote/wsl
 WSL step-by-step tutorial: https://code.visualstudio.com/remote-tutorials/wsl/getting-started
 
-Atom Keymap
+<!-- Atom Keymap
 -----
 Popular Atom keybindings for Visual Studio Code
 Install VS Code extension: `code --install-extension ms-vscode.atom-keybindings`
@@ -387,7 +418,7 @@ cat >~/.vscode-server/data/Machine/settings.json <<EOL
 {
     "atomKeymap.promptV3Features": true,
 }
-EOL
+EOL -->
 
 Active File In StatusBar
 --------
@@ -438,3 +469,32 @@ cat >~/.vscode-server/data/Machine/settings.json <<EOL
     }
 }
 EOL
+
+
+
+
+
+
+
+
+
+Install Scoop
+
+Scoop is a windows command line installer
+https://github.com/lukesampson/scoop
+
+https://scoop.sh/
+
+Installation
+Run the following command from your PowerShell to install scoop to its default location (C:\Users\<user>\scoop)
+
+`Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')`
+
+
+Install Fonts using scoop
+Use scoop:
+
+Run as administrator
+
+scoop bucket add nerd-fonts
+scoop install FiraCode
