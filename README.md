@@ -273,10 +273,24 @@ Install postgresql-contrib package (contains some helpful utilities)
 Confirm installation and get the PostgreSQL version number:
 + `psql --version`
 
+`sudo apt-get install postgresql-client libpq5 libpq-dev`
+
+# install the PostgreSQL 10 cleint
+`sudo apt-get install postgresql-client`
+# libpq is a C library that enables user programs to communicate with the PostgreSQL database server
+`sudo apt-get install libpq5`
+# Header files and static library for compiling C programs to link with the libpq library in order to communicate with a PostgreSQL database backend.
+`sudo apt-get install libpq-dev`
+
+
+
 There are 3 commands you need to know once PostgreSQL is installed:
-`sudo service postgresql status` for checking the status of your database.
-`sudo service postgresql start` to start running your database.
-`sudo service postgresql stop` to stop running your database.
+# check the status of your database
+`sudo service postgresql status`
+# start running your database
+`sudo service postgresql start`
+# stop running your database
+`sudo service postgresql stop`
 
 PostgreSQL User Setup
 -----------------
@@ -303,6 +317,10 @@ To see what user accounts have been created on your PostgreSQL installation, use
 VS Code support for PostgreSQL
 -------------------------
 VS Code supports working with PostgreSQL databases via the PostgreSQL extension, you can create, connect to, manage and query PostgreSQL databases from within VS Code.
+
+
+pgAdmin
+========
 
 
 
